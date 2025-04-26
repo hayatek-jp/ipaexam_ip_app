@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
 import jp.hayatek.ipaexam.ip.databinding.FragmentDashboardBinding;
+import jp.hayatek.ipaexam.ip.ui.dashboard.DashboardViewModel;
 
 public class DashboardFragment extends Fragment {
 

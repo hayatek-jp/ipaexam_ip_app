@@ -1,7 +1,8 @@
 <resources>
     <string name="app_name">ITパスポート攻略アプリ</string>
     <string name="app_name_short">Iパス攻略</string>
+    <string name="exam_name">ITパスポート</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_settings">Settings</string>
 </resources>
