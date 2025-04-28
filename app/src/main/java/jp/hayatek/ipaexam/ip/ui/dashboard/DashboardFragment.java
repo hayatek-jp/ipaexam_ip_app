@@ -1,6 +1,7 @@
 package jp.hayatek.ipaexam.ip.ui.dashboard;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,11 +15,12 @@ import jp.hayatek.ipaexam.ip.databinding.FragmentDashboardBinding;
 import jp.hayatek.ipaexam.ip.ui.dashboard.DashboardViewModel;
 
 public class DashboardFragment extends Fragment {
-
+    private static final String TAG = DashboardFragment.class.getSimpleName();
     private FragmentDashboardBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+        Log.d(TAG, "DashboardFragment created");
         DashboardViewModel dashboardViewModel =
                 new ViewModelProvider(this).get(DashboardViewModel.class);
 
@@ -34,5 +36,6 @@ public class DashboardFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+        Log.d(TAG, "DashboardFragment destroyed");
     }
 }

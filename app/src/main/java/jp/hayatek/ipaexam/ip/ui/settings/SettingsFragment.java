@@ -1,6 +1,7 @@
 package jp.hayatek.ipaexam.ip.ui.settings;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,11 +15,12 @@ import jp.hayatek.ipaexam.ip.databinding.FragmentSettingsBinding;
 import jp.hayatek.ipaexam.ip.ui.settings.SettingsViewModel;
 
 public class SettingsFragment extends Fragment {
-
+    private static final String TAG = SettingsFragment.class.getSimpleName();
     private FragmentSettingsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+        Log.d(TAG, "SettingsFragment created");
         SettingsViewModel settingsViewModel =
                 new ViewModelProvider(this).get(SettingsViewModel.class);
 
@@ -34,5 +36,6 @@ public class SettingsFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+        Log.d(TAG, "SettingsFragment destroyed");
     }
 }
