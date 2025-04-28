@@ -5,4 +5,11 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_settings">Settings</string>
+    <string name="button_qa">一問一答</string>
+    <string name="button_qfield">分野別</string>
+    <string name="button_qterm">期間別</string>
+    <string name="button_qselect">問題選択</string>
+    <string name="button_exam">試験</string>
+    <string name="button_weakpoint">ニガテ</string>
+    <string name="button_bookmark">ブックマーク</string>
 </resources>

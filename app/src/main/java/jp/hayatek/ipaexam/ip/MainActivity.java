@@ -2,13 +2,13 @@ package jp.hayatek.ipaexam.ip;
 
 import android.os.Bundle;
 
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import jp.hayatek.ipaexam.ip.databinding.ActivityMainBinding;
 
@@ -30,6 +30,11 @@ public class MainActivity extends AppCompatActivity {
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle(R.string.exam_name);
         }
+
+        // AdMobの初期化
+        new Thread(() -> {
+            MobileAds.initialize(this, initializationStatus -> {});
+        }).start();
     }
 
 }

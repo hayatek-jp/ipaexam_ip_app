@@ -6,14 +6,14 @@ import androidx.lifecycle.ViewModel;
 
 public class HomeViewModel extends ViewModel {
 
-    private final MutableLiveData<String> mText;
+    private final MutableLiveData<String> mCountdownText;
 
     public HomeViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mCountdownText = new MutableLiveData<>();
+        mCountdownText.setValue("試験まであと∞日");
     }
 
     public LiveData<String> getText() {
-        return mText;
+        return mCountdownText;
     }
 }

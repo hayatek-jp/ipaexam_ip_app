@@ -7,16 +7,137 @@
     tools:context=".ui.home.HomeFragment">
 
     <TextView
-        android:id="@+id/text_home"
+        android:id="@+id/text_countdown"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="26dp"
         android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center_horizontal"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/home_notifications"
+        android:layout_width="395dp"
+        android:layout_height="127dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/border"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_countdown" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/home_adView"
+        android:layout_width="394dp"
+        android:layout_height="129dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="9dp"
+        app:adSize="LARGE_BANNER"
+        app:adUnitId="ca-app-pub-7118930042759267/5107905726"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_notifications" />
+
+    <LinearLayout
+        android:layout_width="373dp"
+        android:layout_height="485dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_adView">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:divider="?android:attr/dividerVertical"
+            android:dividerPadding="8dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_qa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_qa"
+                app:icon="@drawable/ic_writing_black_24dp"
+                app:iconGravity="top"
+                style="@style/Widget.MaterialComponents.Button.Icon"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_qfield"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_qfield"
+                app:icon="@drawable/ic_category_black_24dp"
+                app:iconGravity="top"
+                style="@style/Widget.MaterialComponents.Button.Icon"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_qterm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_qterm"
+                app:icon="@drawable/ic_calendar_black_24dp"
+                app:iconGravity="top"
+                style="@style/Widget.MaterialComponents.Button.Icon"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:divider="?android:attr/dividerVertical"
+            android:dividerPadding="8dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_qselect"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_qselect"
+                app:icon="@drawable/ic_tag_black_24dp"
+                app:iconGravity="top"
+                style="@style/Widget.MaterialComponents.Button.Icon"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_exam"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_exam"
+                app:icon="@drawable/ic_exam_black_24dp"
+                app:iconGravity="top"
+                style="@style/Widget.MaterialComponents.Button.Icon"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:divider="?android:attr/dividerVertical"
+            android:dividerPadding="8dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_weakpoint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_weakpoint"
+                app:icon="@drawable/ic_failed_black_24dp"
+                app:iconGravity="top"
+                style="@style/Widget.MaterialComponents.Button.Icon"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_bookmark"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/button_bookmark"
+                app:icon="@drawable/ic_bookmark_black_24dp"
+                app:iconGravity="top"
+                style="@style/Widget.MaterialComponents.Button.Icon"/>
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
