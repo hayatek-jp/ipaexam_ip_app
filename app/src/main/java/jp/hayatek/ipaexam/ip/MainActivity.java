@@ -44,19 +44,21 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initializeAdMob() {
-        MobileAds.initialize(this, initializationStatus -> {
-            Map<String, AdapterStatus> adapterStatusMap = initializationStatus.getAdapterStatusMap();
-            for (Map.Entry<String, AdapterStatus> entry : adapterStatusMap.entrySet()) {
-                String adapterClassName = entry.getKey();
-                AdapterStatus adapterStatus = entry.getValue();
-                Log.v(TAG, String.format("Adapter Name: %s, State: %s, Description: %s, Latency: %d",
-                        adapterClassName,
-                        adapterStatus.getInitializationState(),
-                        adapterStatus.getDescription(),
-                        adapterStatus.getLatency()));
-            }
-            Log.d(TAG, "AdMob initialization completed");
-        });
+        new Thread(() -> {
+            MobileAds.initialize(this, initializationStatus -> {
+                Map<String, AdapterStatus> adapterStatusMap = initializationStatus.getAdapterStatusMap();
+                for (Map.Entry<String, AdapterStatus> entry : adapterStatusMap.entrySet()) {
+                    String adapterClassName = entry.getKey();
+                    AdapterStatus adapterStatus = entry.getValue();
+                    Log.v(TAG, String.format("Adapter Name: %s, State: %s, Description: %s, Latency: %d",
+                            adapterClassName,
+                            adapterStatus.getInitializationState(),
+                            adapterStatus.getDescription(),
+                            adapterStatus.getLatency()));
+                }
+                Log.d(TAG, "AdMob initialization completed");
+            });
+        }).start();
         Log.d(TAG, "AdMob initialization started");
     }
 
