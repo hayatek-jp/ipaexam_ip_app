@@ -3,6 +3,7 @@ package jp.hayatek.ipaexam.ip;
 import android.os.Bundle;
 import android.util.Log;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -24,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Log.d(TAG, "Application launched");
+        Log.i(TAG, "Application launched");
+
+        EdgeToEdge.enable(this);
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -55,5 +58,12 @@ public class MainActivity extends AppCompatActivity {
             Log.d(TAG, "AdMob initialization completed");
         });
         Log.d(TAG, "AdMob initialization started");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        binding = null;
+        Log.i(TAG, "Application destroyed");
     }
 }
