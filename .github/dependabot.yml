@@ -7,8 +7,6 @@ updates:
     assignees:
       - "hayatek-jp"
     open-pull-requests-limit: 10
-    reviewers:
-      - "hayatek-jp"
     target-branch: "main"
 
   - package-ecosystem: "gradle"
@@ -18,6 +16,4 @@ updates:
     assignees:
       - "hayatek-jp"
     open-pull-requests-limit: 10
-    reviewers:
-      - "hayatek-jp"
     target-branch: "main"
