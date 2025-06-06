@@ -14,7 +14,7 @@ playServicesAds = "24.2.0"
 googleServices = "4.4.2"
 firebaseBom = "33.13.0"
 firebaseCrashlytics = "19.4.3"
-googleFirebaseCrashlytics = "3.0.3"
+googleFirebaseCrashlytics = "3.0.4"
 activity = "1.10.1"
 legacySupportV4 = "1.0.0"
 
